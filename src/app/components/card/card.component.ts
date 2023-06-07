@@ -11,5 +11,5 @@ export class CardComponent {
 
   @Input() movieCard !: MovieDiscover;
 
-  @Input() card!: Card;
+/*   @Input() card!: Card; */
 }
