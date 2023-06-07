@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       .subscribe( el => (el.results.map((moviesFound : MovieDiscover) => this.movies.push(moviesFound)),
                           console.log(this.movies)))
   }
-
+/* 
   dataCard: Card[] = [
     {
       img: 'https://picsum.photos/200/300',
@@ -47,5 +47,5 @@ export class HomeComponent implements OnInit {
       description: 'dwwkiwdwid',
     },
   ];
-
+ */
 }
