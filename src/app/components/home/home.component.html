@@ -1,0 +1,5 @@
+<section class="container-fluid home">
+    <div *ngFor="let item of movies; let i = index">
+        <app-card [movieCard]="item"></app-card>
+    </div>
+</section>
