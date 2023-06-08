@@ -1,6 +1,47 @@
+@font-face {
+  font-family: KanitLight;
+  src: url(../../fonts/Kanit/Kanit-Light.woff);
+}
+@font-face {
+  font-family: KanitMedium;
+  src: url(../../fonts/Kanit/Kanit-Medium.woff);
+}
+@font-face {
+  font-family: KanitBold;
+  src: url(../../fonts/Kanit/Kanit-Bold.woff);
+}
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.spacer {
+  background-color: white;
+  height: 60px;
+}
+
+.hero-page {
+  background-image: url(../../images/logo3.jpg);
+  color: white;
+}
+.hero-page h1 {
+  font-family: KanitBold;
+  letter-spacing: 3px;
+  font-size: 45px;
+}
+.hero-page p {
+  font-family: KanitLight;
+}
+
+@media screen and (min-device-width: 0) and (max-device-width: 576px) {
+  .hero-page {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
+  .hero-page h1 {
+    color: white;
+  }
 }/*# sourceMappingURL=home.component.css.map */

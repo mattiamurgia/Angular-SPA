@@ -8,12 +8,12 @@
 </div>
  -->
 
-<div class="card mb-3" style="max-width: 640px;">
-  <div class="row g-0">
-    <div class="col-md-4">
+<div class="card mb-3 card-movie" style="max-width: 640px;">
+  <div class="row g-0 {{idCard%2 == 0? 'left-img-card' : 'right-img-card'}}">
+    <div class="col-md-5 img-container">
       <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">{{movieCard.original_title}}</h5>
         <p class="card-text">{{movieCard.overview}}</p>

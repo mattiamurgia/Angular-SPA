@@ -1,0 +1,13 @@
+form {
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+          backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.44);
+  border-radius: 12px;
+  color: white;
+}
+form h3 {
+  font-size: 3rem;
+}
+form label {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=form.component.css.map */

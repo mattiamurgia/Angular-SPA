@@ -1,0 +1,53 @@
+.card-movie {
+  height: 300px;
+}
+
+.left-img-card, .right-img-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right-img-card {
+  flex-direction: row-reverse;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+img {
+  position: relative;
+  transition: all 0.5s;
+}
+img:hover {
+  transform: scale(1.1);
+}
+
+.card-body:hover {
+  max-height: 300px;
+}
+
+.card-body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 576px) {
+  .card-movie {
+    margin: 20px 40px;
+    height: 485px;
+    font-size: 10px;
+  }
+  .left-img-card, .right-img-card {
+    margin-bottom: 50px;
+  }
+  .card-img-top {
+    height: 350px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=card.component.css.map */

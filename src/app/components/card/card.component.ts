@@ -10,6 +10,7 @@ import { Card } from 'src/app/models/Card';
 export class CardComponent {
 
   @Input() movieCard !: MovieDiscover;
+  @Input() idCard !: number;
 
 /*   @Input() card!: Card; */
 }
