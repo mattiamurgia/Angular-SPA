@@ -9,9 +9,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, CardComponent, HomeComponent, FooterComponent],
+
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    FormComponent,
+    NavbarComponent,
+    CardComponent,
+    HomeComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

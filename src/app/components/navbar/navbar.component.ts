@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LocalService } from 'src/app/services/localService/local-service.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  userName = "Marco"
+  service = inject(LocalService);
+
+  userName = JSON.stringify(this.service.getUser());
 }

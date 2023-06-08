@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { Card } from 'src/app/models/Card';
 import { MovieDiscover } from 'src/app/models/MovieDiscover';
-import { MoviesCallApiService } from 'src/app/services/movies-call-api.service';
+import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-api.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit()  {
     this.getMovies();
   }
-  
+
   movies : MovieDiscover[] = []
 
   getMovies = () => {
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       .subscribe( el => (el.results.map((moviesFound : MovieDiscover) => this.movies.push(moviesFound)),
                           console.log(this.movies)))
   }
-/* 
+/*
   dataCard: Card[] = [
     {
       img: 'https://picsum.photos/200/300',

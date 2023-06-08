@@ -1,0 +1,37 @@
+<form class="col mt-5 border-5 p-5" [formGroup]="dataForm" >
+  <h3 class="text-center">Login</h3>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" formControlName="email" placeholder="Your Email" [(ngModel)]="user.email" id="exampleInputEmail1" (change)="testRegex()">
+
+    <!-- Message Error Email -->
+    <small *ngIf="!errorEmail; else elseEmail">
+      <p class="text-success">{{messageEmail}}</p>
+    </small>
+
+    <ng-template #elseEmail>
+      <small>
+        <p class="text-danger">{{messageEmail}}</p>
+      </small>
+    </ng-template>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password" placeholder="Your Password"
+      [(ngModel)]="user.password" id="exampleInputPassword1" (change)="testRegex()">
+
+    <!-- Message Error Password -->
+    <small *ngIf="!errorPassword; else elsePassword">
+      <p class="text-success">{{messagePassword}}</p>
+    </small>
+
+    <ng-template #elsePassword>
+      <small>
+        <p class="text-danger">{{messagePassword}}</p>
+      </small>
+    </ng-template>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="errorEmail || errorPassword" (click)="onSubmit()">Submit</button>
+</form>
