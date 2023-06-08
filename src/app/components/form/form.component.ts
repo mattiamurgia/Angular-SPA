@@ -12,44 +12,44 @@ import { LocalService } from 'src/app/services/localService/local-service.servic
 })
 export class FormComponent implements OnInit {
   user: User = {
-    email: '',
+    nickname: '',
     password: '',
   };
 
   formBuilder = inject(FormBuilder);
   localService = inject(LocalService);
   dataForm!: FormGroup;
-  messageEmail!: string;
+  messageNickname!: string;
   messagePassword!: string;
-  errorEmail!: boolean;
+  errorNickname!: boolean;
   errorPassword!: boolean;
 
   ngOnInit(): void {
     this.dataForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      nickname: ['', Validators.required],
       password: ['', Validators.required],
     });
 
-     this.onSubmit();
-     {
-       this.localService.setUser(this.user);
-       console.log(this.localService.getUser());
-     }
+    this.onSubmit();
+    {
+      this.localService.setUser(this.user);
+      console.log(this.localService.getUser());
+    }
   }
 
   testRegex() {
-    const emailInput = this.user.email;
+    const nicknameInput = this.user.nickname;
     const passwordInput = this.user.password;
 
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const nicknamePattern = /^[A-Za-z]+-[0-9]{2}[@]$/;
     const passwordPattern = /^(?=.*[A-Z])(?=.*\d).{5,}$/;
 
-    if (emailPattern.test(emailInput)) {
-      this.messageEmail = 'Email valida';
-      this.errorEmail = false;
+    if (nicknamePattern.test(nicknameInput)) {
+      this.messageNickname = 'Email valida';
+      this.errorNickname = false;
     } else {
-      this.messageEmail = 'Email non valida';
-      this.errorEmail = true;
+      this.messageNickname = 'Email non valida es: Alessio-92@';
+      this.errorNickname = true;
     }
 
     if (passwordPattern.test(passwordInput)) {
@@ -59,14 +59,11 @@ export class FormComponent implements OnInit {
       this.messagePassword = 'Password non valida es: "Abc123"';
       this.errorPassword = true;
     }
-    return this.messageEmail + this.messagePassword;
+    return this.messageNickname + this.messagePassword;
   }
 
-
-  onSubmit()
-  {
+  onSubmit() {
     this.localService.setUser(this.user);
-    console.log(this.localService.getUser())
-}
-
+    console.log(this.localService.getUser());
+  }
 }

@@ -8,34 +8,19 @@ import { User } from 'src/app/models/User';
 export class LocalService {
   constructor() {}
 
-  private user = new BehaviorSubject<User>({ email: '', password: '' });
+  private user = new BehaviorSubject<User>({ nickname: '', password: '' });
 
-
-  public setUser(user:User) {
+  public setUser(user: User) {
     this.user.next(user);
     localStorage.setItem('user', JSON.stringify(user));
   }
 
-  public getUser()
-  {
+  public getUser() {
     const user = localStorage.getItem('user');
-    if (user)
-    {
+    if (user) {
       this.user.next(JSON.parse(user));
     }
 
     return this.user.getValue();
   }
-
-
-
-
-
-
-
-
-
-
-
-
 }
