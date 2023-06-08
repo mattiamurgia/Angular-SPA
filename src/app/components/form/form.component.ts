@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../models/User';
 import { LocalService } from 'src/app/services/localService/local-service.service';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 //Cambiare regex al posto di un email un nickname
 @Component({
@@ -11,6 +11,9 @@ import { LocalService } from 'src/app/services/localService/local-service.servic
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  //costruttore per la navigazione con route
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
   user: User = {
     nickname: '',
     password: '',
@@ -34,8 +37,13 @@ export class FormComponent implements OnInit {
     {
       this.localService.setUser(this.user);
       console.log(this.localService.getUser());
+      //chiamo la funzione di navigazione dopo aver validato i dati
+      this.home(); //nota va direttamente alla page di home perchè il login è da sistemare
     }
-  }
+  } //funzione di navigazione alla home
+  home = () => {
+    this.router.navigate(['home']);
+  };
 
   testRegex() {
     const nicknameInput = this.user.nickname;
