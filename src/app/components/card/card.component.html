@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<!-- <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{movieCard.original_title}}</h5>
@@ -6,3 +6,24 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+ -->
+
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{movieCard.original_title}}</h5>
+        <p class="card-text">{{movieCard.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #noCard>
+  <p>Data not found</p>
+</ng-template>
+
