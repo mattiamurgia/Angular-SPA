@@ -50,4 +50,7 @@ img:hover {
     height: 350px;
     width: 100%;
   }
+  .img-container {
+    max-height: 350px;
+  }
 }/*# sourceMappingURL=card.component.css.map */

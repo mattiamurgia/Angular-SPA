@@ -11,7 +11,8 @@
 <div class="card mb-3 card-movie" style="max-width: 640px;">
   <div class="row g-0 {{idCard%2 == 0? 'left-img-card' : 'right-img-card'}}">
     <div class="col-md-5 img-container">
-      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
+    <!-- <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a> -->
+    <p (click)="setMovie()"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></p>
     </div>
     <div class="col-md-7">
       <div class="card-body">

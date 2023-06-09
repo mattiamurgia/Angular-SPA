@@ -5,7 +5,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+<<<<<<< HEAD
 import { authGuardGuard } from './GateGuardian/auth-guard.guard';
+=======
+import { DetailComponent } from './components/detail/detail.component';
+>>>>>>> 6affbcc (aggiornamento della pagina dettaglio, card dettaglio)
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -14,6 +18,7 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: 'full',
   },
+<<<<<<< HEAD
   {
     path: 'home',
     component: HomeComponent,
@@ -39,6 +44,13 @@ const routes: Routes = [
     canActivate: [authGuardGuard],
   },
   { path: '**', component: PageNotFoundComponent },
+=======
+  { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'home/movies/:id', component: DetailComponent, pathMatch: 'full' },
+  { path: 'lists', component: ListingComponentComponent, pathMatch: 'full' },
+  { path: 'favorites', component: FavoritesComponent, pathMatch: 'full'},
+  { path: '**', component: PageNotFoundComponent }
+>>>>>>> 6affbcc (aggiornamento della pagina dettaglio, card dettaglio)
   // provo a fare il push
 ];
 

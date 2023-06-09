@@ -1,8 +1,9 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
-import { map } from 'rxjs';
+import { Observable, Subject, map } from 'rxjs';
 import { Card } from 'src/app/models/Card';
 import { MovieDiscover } from 'src/app/models/MovieDiscover';
+import { CardDetailService } from 'src/app/services/detailService/card-detail.service';
 import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-api.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: MoviesCallApiService) {}
   // serve a fare il back con la pagina precedente
   location = inject(Location);
+
   ngOnInit() {
     this.getMovies();
   }
@@ -32,6 +34,7 @@ export class HomeComponent implements OnInit {
         )
       );
   };
+  
   // funzione da associare a icon freccia indietro
   getback = () => {
     this.location.back();
