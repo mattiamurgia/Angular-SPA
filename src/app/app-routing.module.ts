@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { authGuardGuard } from './GateGuardian/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,11 +14,31 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: 'full',
   },
-  { path: 'home', component: HomeComponent, pathMatch: 'full' },
-  { path: 'detail/:id', component: HomeComponent, pathMatch: 'full' },
-  { path: 'lists', component: ListingComponentComponent, pathMatch: 'full' },
-  { path: 'favorites', component: FavoritesComponent, pathMatch: 'full'},
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: 'home',
+    component: HomeComponent,
+    pathMatch: 'full',
+    canActivate: [authGuardGuard],
+  },
+  {
+    path: 'detail/:id',
+    component: HomeComponent,
+    pathMatch: 'full',
+    canActivate: [authGuardGuard],
+  },
+  {
+    path: 'lists',
+    component: ListingComponentComponent,
+    pathMatch: 'full',
+    canActivate: [authGuardGuard],
+  },
+  {
+    path: 'favorites',
+    component: FavoritesComponent,
+    pathMatch: 'full',
+    canActivate: [authGuardGuard],
+  },
+  { path: '**', component: PageNotFoundComponent },
   // provo a fare il push
 ];
 

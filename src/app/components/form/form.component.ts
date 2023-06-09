@@ -27,6 +27,9 @@ export class FormComponent implements OnInit {
   errorNickname!: boolean;
   errorPassword!: boolean;
 
+// TODO: creare il token e inserirlo nel local storage e all'interno della chiave token dentro l'user 
+
+
   ngOnInit(): void {
     this.dataForm = this.formBuilder.group({
       nickname: ['', Validators.required],
