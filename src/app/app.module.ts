@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormComponent } from './components/form/form.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
 
@@ -22,6 +24,8 @@ import { FormComponent } from './components/form/form.component';
     CardComponent,
     HomeComponent,
     FooterComponent,
+    DetailComponent,
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,
