@@ -1,0 +1,41 @@
+
+@font-face {
+    font-family: KanitLight;
+    src: url(../../fonts/Kanit/Kanit-Light.woff);
+}
+
+@font-face {
+    font-family: KanitMedium;
+    src: url(../../fonts/Kanit/Kanit-Medium.woff);
+}
+
+@font-face {
+    font-family: KanitBold;
+    src: url(../../fonts/Kanit/Kanit-Bold.woff);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1, h3 {
+        color: #fff;
+    }
+
+    h1 {
+        font-family: KanitBold;
+        letter-spacing: 3px;
+        font-size:45px;
+    }
+    
+    h3 {
+        font-family:KanitLight;
+    }
+
+    #carousel {
+        margin-bottom: 10%;
+        height: 15%;
+    }
+}
