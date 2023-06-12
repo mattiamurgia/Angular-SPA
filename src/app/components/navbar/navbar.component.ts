@@ -13,4 +13,14 @@ export class NavbarComponent {
 
   userName = JSON.stringify(this.service.getUser());
 
+  showInput = false;
+  searchQuery!: string;
+
+  toggleInput() {
+    this.showInput = !this.showInput;
+    if (!this.showInput) {
+      this.searchQuery = ''; // Resettiamo la query di ricerca quando viene nascosta l'input
+    }
+  }
+
 }
