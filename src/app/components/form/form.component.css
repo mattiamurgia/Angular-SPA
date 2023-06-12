@@ -1,4 +1,9 @@
 form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
   -webkit-backdrop-filter: blur(7px) saturate(200%);
           backdrop-filter: blur(7px) saturate(200%);
   background-color: rgba(0, 0, 0, 0.44);
@@ -10,4 +15,19 @@ form h3 {
 }
 form label {
   font-size: 1.5rem;
+}
+
+.custom-button {
+  background-color: rgba(36, 36, 36, 0.852);
+  color: white;
+}
+.custom-button:focus, .custom-button:hover, .custom-button:active {
+  background-color: rgba(36, 36, 36, 0.852);
+}
+
+@media screen and (max-device-width: 576px) {
+  form {
+    min-width: 16rem;
+    max-width: 30rem;
+  }
 }/*# sourceMappingURL=form.component.css.map */

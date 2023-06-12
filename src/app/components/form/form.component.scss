@@ -1,4 +1,9 @@
 form {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:100%;
   backdrop-filter: blur(7px) saturate(200%);
     background-color: rgba(0, 0, 0, 0.44);
     border-radius: 12px;
@@ -11,4 +16,19 @@ form {
     label{
       font-size: 1.5rem;
     }
+}
+
+.custom-button {
+  background-color: rgba(36, 36, 36, 0.852);
+  color: white;
+  &:focus, &:hover, &:active {
+    background-color: rgba(36, 36, 36, 0.852);
+  }
+}
+
+@media screen and (max-device-width: 576px)  {
+  form {
+    min-width:16rem;
+    max-width: 30rem;
+  }
 }

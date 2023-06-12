@@ -8,3 +8,9 @@ div {
   background-repeat: no-repeat, repeat;
   background-size: cover;
 }
+
+@media screen and (max-device-width:576px) {
+  div {
+   min-width:20rem;
+  }
+}

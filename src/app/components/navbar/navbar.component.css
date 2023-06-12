@@ -1,3 +1,21 @@
 .bg-body-tertiary {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid white !important;
+}
+
+.btn {
+  border-color: #dc3545;
+}
+.btn i {
+  color: #dc3545;
+}
+.btn.btn:hover {
+  background-color: #dc3545;
+  border-color: white;
+}
+.btn.btn:hover i {
+  color: white;
+}
+
+.user-container {
+  font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }/*# sourceMappingURL=navbar.component.css.map */
