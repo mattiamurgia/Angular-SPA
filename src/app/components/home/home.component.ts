@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
         )
       );
   };
-  
+
   // funzione da associare a icon freccia indietro
   getback = () => {
     this.location.back();
