@@ -10,16 +10,17 @@
 
 <div class="card mb-3 card-movie" style="max-width: 640px;">
   <div class="row g-0 {{idCard%2 == 0? 'left-img-card' : 'right-img-card'}}">
-    <div class="col-md-5 img-container">
+    <div class="img-container">
     <!-- <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a> -->
     <p (click)="setMovie()"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></p>
     </div>
-    <div class="col-md-7">
+    <div class="card-body-container">
       <div class="card-body">
         <h5 class="card-title">{{movieCard.original_title}}</h5>
         <p class="card-text">{{movieCard.overview}}</p>
       </div>
     </div>
+    <button class="btn custom-button">Dettagli <i class="bi bi-arrow-90deg-right"></i></button>
   </div>
 </div>
 

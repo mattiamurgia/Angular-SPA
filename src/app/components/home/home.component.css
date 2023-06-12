@@ -19,7 +19,13 @@
 
 .spacer {
   background-color: white;
-  height: 60px;
+  text-align: center;
+}
+.spacer h2 {
+  font-family: KanitBold;
+}
+.spacer p {
+  font-family: KanitLight;
 }
 
 .hero-page {
@@ -29,13 +35,30 @@
 .hero-page h1 {
   font-family: KanitBold;
   letter-spacing: 3px;
-  font-size: 45px;
+  font-size: 70px;
+  margin-top: 5px;
+  padding: 5px;
 }
 .hero-page p {
+  width: 100%;
   font-family: KanitLight;
+  font-size: 16px;
 }
 
-@media screen and (min-device-width: 0) and (max-device-width: 576px) {
+.hero-page-container {
+  background-color: rgb(36, 36, 36);
+  width: 110%;
+}
+
+.container-cards {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 576px) {
   .hero-page {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -43,5 +66,59 @@
   }
   .hero-page h1 {
     color: white;
+  }
+  .hero-page-container {
+    width: 80%;
+    min-width: 200px;
+  }
+  .spacer {
+    height: 600px;
+  }
+  .spacer h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  .spacer p {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-device-width: 577px) {
+  .hero-page {
+    height: 750px;
+  }
+  .spacer {
+    height: 500px;
+  }
+  .spacer h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .spacer p {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .container-cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .hero-page {
+    height: 750px;
+  }
+  .hero-page h1 {
+    font-size: 8rem;
+  }
+  .spacer {
+    height: 350px;
+  }
+  .spacer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .spacer p {
+    width: 50%;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=home.component.css.map */

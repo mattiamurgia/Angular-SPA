@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormComponent } from './components/form/form.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 
 @NgModule({
 
@@ -26,6 +27,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     FooterComponent,
     DetailComponent,
     FavoritesComponent,
+    ListingComponentComponent
   ],
   imports: [
     BrowserModule,

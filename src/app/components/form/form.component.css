@@ -1,33 +1,95 @@
+@font-face {
+  font-family: KanitMedium;
+  src: url(../../fonts/Kanit/Kanit-Medium.woff);
+}
+@font-face {
+  font-family: KanitLight;
+  src: url(../../fonts/Kanit/Kanit-Light.woff);
+}
 form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
   -webkit-backdrop-filter: blur(7px) saturate(200%);
           backdrop-filter: blur(7px) saturate(200%);
-  background-color: rgba(0, 0, 0, 0.44);
+  background-color: rgba(0, 0, 0, 0.54);
   border-radius: 12px;
   color: white;
 }
 form h3 {
   font-size: 3rem;
+  padding-top: 1rem;
 }
 form label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: KanitLight;
+  margin: 0;
+}
+form input {
+  background-color: rgba(36, 36, 36, 0.852);
+  border: 2px solid #dc3545;
+  color: white;
+  border-radius: 25px 25px;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+form input:hover {
+  box-shadow: 280px 0 0 0 inset #dc3545;
+}
+form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.497);
+}
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.497);
+}
+
+h3 {
+  font-family: KanitMedium;
+}
+
+.container-labels {
+  width: 100%;
 }
 
 .custom-button {
+  width: 30%;
+  font-family: KanitLight;
   background-color: rgba(36, 36, 36, 0.852);
+  border: 2px solid #dc3545;
   color: white;
+  transition: all 0.5s ease-out;
 }
-.custom-button:focus, .custom-button:hover, .custom-button:active {
-  background-color: rgba(36, 36, 36, 0.852);
+.custom-button:hover {
+  color: white;
+  box-shadow: 200px 0 0 0 inset #dc3545;
+  border-color: rgba(36, 36, 36, 0.852);
 }
 
 @media screen and (max-device-width: 576px) {
   form {
     min-width: 16rem;
-    max-width: 30rem;
+    height: 20rem;
+  }
+  form input {
+    max-width: 20rem;
+  }
+  .custom-button {
+    width: 30%;
+  }
+  .custom-button:hover {
+    box-shadow: 130px 0 0 0 inset #dc3545;
+  }
+}
+@media screen and (min-device-width: 577px) {
+  form {
+    height: 25rem;
+  }
+  form input {
+    max-width: 20rem;
+  }
+}
+@media screen and (min-device-width: 1200px) {
+  form {
+    height: 30rem;
+  }
+  input {
+    max-width: 20rem;
   }
 }/*# sourceMappingURL=form.component.css.map */

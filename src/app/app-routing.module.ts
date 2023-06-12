@@ -47,6 +47,11 @@ const routes: Routes = [
     pathMatch: 'full',
     canActivate: [authGuardGuard],
   },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    canActivate: [authGuardGuard]
+  }
   // { path: 'lists', component: ListingComponentComponent, pathMatch: 'full' },
   // { path: 'favorites', component: FavoritesComponent, pathMatch: 'full'},
   // { path: '**', component: PageNotFoundComponent }

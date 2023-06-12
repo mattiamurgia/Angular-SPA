@@ -1,6 +1,6 @@
-<form class="col-sm-8 col-md-6 border-5 p-2" [formGroup]="dataForm" >
+<form class="border-5 p-2 d-flex flex-column justify-content-around align-items-center no-margin row" [formGroup]="dataForm" >
   <h3 class="text-center">Login</h3>
-  <div class="mb-3">
+  <div class="container-labels d-flex flex-column justify-content-center align-items-center">
     <label for="exampleInputEmail1" class="form-label">Email</label>
     <input type="email" class="form-control" formControlName="nickname" placeholder="Your Nickname" [(ngModel)]="user.nickname" id="exampleInputEmail1" (change)="testRegex()">
 
@@ -14,9 +14,7 @@
         <p class="text-danger">{{messageNickname}}</p>
       </small>
     </ng-template>
-  </div>
 
-  <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" class="form-control" formControlName="password" placeholder="Your Password"
       [(ngModel)]="user.password" id="exampleInputPassword1" (change)="testRegex()">

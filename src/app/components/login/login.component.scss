@@ -3,7 +3,8 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin:0;
+  border:5px solid black;
   background-image: url(../../../assets/IT-it-20230605-popsignuptwoweeks-perspective_alpha_website_large.jpg);
   background-repeat: no-repeat, repeat;
   background-size: cover;

@@ -5,19 +5,19 @@
 </section> -->
 
 
-<div class="px-4 py-5 text-center hero-page">
+<div class="px-4 py-5 text-center hero-page d-flex justify-content-center align-items-center">
+  <div class="hero-page-container d-flex flex-column justify-content-center align-items-center">
   <h1 class="display-5 fw-bold">Color Movie</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular 
-      front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components,
-       and powerful JavaScript plugins.</p>
-    </div>
+  </div>
 </div>
 
-<div class="spacer"></div>
+<div class="spacer d-flex flex-column justify-content-center align-items-center">
+  <h2>Discover our new high performance platform</h2>
+  <p>We collect movies from one of the best servers in the world. Seek your favourite movies, check their description, and keep finding something new you may like! </p>
+</div>
 
-<div *ngFor="let item of movies; let i = index" class="container d-flex justify-content-center align-items-center flex-column bg-danger">
-  <app-card [movieCard]="item" [idCard]="i"></app-card>
+<div class="container-cards bg-danger row">
+  <app-card *ngFor="let item of movies; let i = index" class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 col-xl-3"[movieCard]="item" [idCard]="i"></app-card>
 </div>
 
 
