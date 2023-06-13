@@ -73,13 +73,12 @@ export class FormComponent implements OnInit {
     return this.messageNickname + this.messagePassword;
   }
 
-  onSubmit()
-  {
-    const tokenUser = this.user.token = Md5.hashAsciiStr(
+  onSubmit() {
+    const tokenUser = (this.user.token = Md5.hashAsciiStr(
       this.localService.getUser().nickname +
         this.localService.getUser().password +
         new Date().toString()
-  );
+    ));
 
     this.localService.setUser(this.user);
     if (
@@ -87,17 +86,16 @@ export class FormComponent implements OnInit {
         this.localService.getUser().nickname,
         this.localService.getUser().password
       )
-    )
-    {
+    ) {
       this.localService.setToken(tokenUser);
       console.table({ 'User Local Service': this.localService.getUser() });
-     console.table({
-       'Nickname': this.localService.getUser().nickname,
-       'Password': this.localService.getUser().password,
-       'Token Local': this.localService.getUser().token,
-       'Token User': this.user.token,
-       'LocalStorage Token': localStorage.getItem('tokenUser'),
-     });
+      console.table({
+        Nickname: this.localService.getUser().nickname,
+        Password: this.localService.getUser().password,
+        'Token Local': this.localService.getUser().token,
+        'Token User': this.user.token,
+        'LocalStorage Token': localStorage.getItem('tokenUser'),
+      });
       this.toHome();
     } else {
       alert('Utente non trovato');

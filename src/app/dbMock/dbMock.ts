@@ -1,4 +1,4 @@
-import { User } from "../models/User";
+import { User } from '../models/User';
 
 export const users: User[] = [
   {
@@ -27,5 +27,3 @@ export const users: User[] = [
     token: '',
   },
 ];
-
-
