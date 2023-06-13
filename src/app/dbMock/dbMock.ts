@@ -1,29 +1,31 @@
-export const users = [
+import { User } from "../models/User";
+
+export const users: User[] = [
   {
-    username: 'user1-01@',
-    password: 'Abc12',
+    nickname: 'User-01@',
+    password: 'Abc01',
     token: '',
   },
   {
-    username: 'user2-02@',
-    password: 'Xyz34',
+    nickname: 'User-02@',
+    password: 'Abc02',
     token: '',
   },
   {
-    username: 'user3-03@',
-    password: 'Def56',
+    nickname: 'User-03@',
+    password: 'Abc03',
     token: '',
   },
   {
-    username: 'user4-04@',
-    password: 'Ghi78',
+    nickname: 'User-04@',
+    password: 'Abc04',
     token: '',
   },
   {
-    username: 'user5-05@',
-    password: 'Jkl90',
+    nickname: 'User-05@',
+    password: 'Abc05',
     token: '',
   },
 ];
 
-console.log(users);
+

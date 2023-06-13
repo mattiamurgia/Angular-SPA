@@ -41,14 +41,7 @@ form {
     }
 }
 
-h3 {
-  font-family: KanitMedium;
-}
-
-.container-labels {
-  width:100%;
-}
-
+// form ::placeholder{color:red}
 .custom-button {
   width:30%;
   font-family: KanitLight;
@@ -85,7 +78,7 @@ h3 {
 
     form {
       height:25rem;
-    
+
       input {
       max-width: 20rem;
     }

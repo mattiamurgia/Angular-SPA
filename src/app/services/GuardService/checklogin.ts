@@ -2,9 +2,9 @@ import { users } from 'src/app/dbMock/dbMock';
 
 export const isLoggedIn = (): boolean => {
   // Recupera il token dal localStorage
-  const storedToken = localStorage.getItem('token');
+  const storedToken = localStorage.getItem('tokenUser');
 
-  console.log('storedToken', storedToken);
+  console.log('tokenUser', storedToken);
 
   // Controllo se il token è presente nel localStorage
   if (storedToken) {

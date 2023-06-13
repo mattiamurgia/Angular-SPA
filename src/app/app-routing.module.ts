@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-import { authGuardGuard } from './GateGuardian/auth-guard.guard';
+import { authGuardGuard } from './gateGuardian/auth-guard.guard';
 import { DetailComponent } from './components/detail/detail.component';
 
 const routes: Routes = [
