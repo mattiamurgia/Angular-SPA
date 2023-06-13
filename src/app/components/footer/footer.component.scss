@@ -1,8 +1,24 @@
-.footer {
-    height:100px;
+@font-face {
+    font-family: 'KanitMedium';
+    src: url(../../fonts/Kanit/Kanit-Medium.woff);
+  }
+
+
+
+footer{
+ font-family: 'KanitMedium';
+  font-size: 1.2rem;
+    backdrop-filter: blur(7px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.664) !important;
+    a {
+      color: white !important;
+    } p {
+      color: white !important;
+    }
+    img{
+      border-radius: 50% !important;
+      margin-bottom: 5px;
+    }
 }
 
-.spacer {
-    background-color:white;
-    height:60px;
-}
+
