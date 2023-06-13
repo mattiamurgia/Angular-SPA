@@ -15,6 +15,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
 @NgModule({
 
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DetailComponent,
     FavoritesComponent,
     ListingComponentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardDetailsComponent
   ],
   imports: [
     BrowserModule,

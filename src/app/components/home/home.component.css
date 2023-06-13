@@ -136,9 +136,9 @@
   }
 }
 @media screen and (min-device-width: 577px) {
-  /*   .hero-page {
-      height: 750px;
-    } */
+  .hero-page {
+    height: 500px;
+  }
   /*   .spacer {
       h2 {
         font-size: 3rem;

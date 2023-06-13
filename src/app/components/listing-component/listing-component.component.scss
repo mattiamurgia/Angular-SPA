@@ -14,28 +14,76 @@
     src: url(../../fonts/Kanit/Kanit-Bold.woff);
 }
 
-.container {
+.container-listing {
+    min-height:620px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    h1, h3 {
-        color: #fff;
-    }
-
-    h1 {
-        font-family: KanitBold;
-        letter-spacing: 3px;
-        font-size:45px;
-    }
-    
-    h3 {
-        font-family:KanitLight;
-    }
+    margin:0;
+    background-color: #dc3545;
+    font-family: KanitMedium;
+    color:white;
 
     #carousel {
         margin-bottom: 10%;
         height: 15%;
+    }
+
+    .custom-button {
+        width:100px;
+        height:30px;
+        font-family: KanitLight;
+        background-color: white;
+        margin-left:10px;
+        border-radius:5px 5px;
+        color: black;
+        transition: all 0.5s ease-out;
+        text-align: center;
+        line-height: 0;
+        &:hover {
+          color:#dc3545;
+          border-color: rgb(48, 47, 47);
+          box-shadow: 420px 0 0 0 inset rgb(48, 47, 47) ;
+        }
+      }
+    }
+
+@media screen and (min-device-width:0) and (max-device-width: 577px) {
+    img {
+        height:550px;
+      }
+}
+
+@media screen and (min-device-width:578px) {
+
+    .container-listing {
+        height:700px;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        top:300%;
+    }
+
+    .carousel-caption {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: KanitLight;
+        bottom:0;
+        background-color: rgb(48, 47, 47, 0.85);
+        padding-bottom:0;
+
+        h5 {
+            font-size:2.5rem;
+        }
+
+        p {
+            font-size:0.8rem;
+        }
+    }
+
+    img {
+        height:550px;
     }
 }

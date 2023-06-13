@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieDiscover } from 'src/app/models/MovieDiscover';
+import { CardDetailService } from 'src/app/services/detailService/card-detail.service';
 import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-api.service';
 @Component({
   selector: 'app-detail',
@@ -10,11 +11,11 @@ import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-
 export class DetailComponent implements OnInit{
 
 
-  cardDetail = inject(MoviesCallApiService)
+  cardDetail = inject(CardDetailService)
   cardObtained !: MovieDiscover;
 
   ngOnInit() {
-    this.cardDetail.getData().subscribe( item => this.cardObtained = item)
+    this.cardDetail.getMovie().subscribe( item => this.cardObtained = item)
   }
 
   getMovieDetail = () => {

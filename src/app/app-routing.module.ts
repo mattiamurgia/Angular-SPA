@@ -22,19 +22,13 @@ const routes: Routes = [
     canActivate: [authGuardGuard],
   },
   {
-    path: 'detail/:id',
-    component: HomeComponent,
-    pathMatch: 'full',
-    canActivate: [authGuardGuard],
-  },
-  {
-    path: 'lists',
+    path: 'home/lists',
     component: ListingComponentComponent,
     pathMatch: 'full',
     canActivate: [authGuardGuard],
   },
   {
-    path: 'favorites',
+    path: 'home/favorites',
     component: FavoritesComponent,
     pathMatch: 'full',
     canActivate: [authGuardGuard],

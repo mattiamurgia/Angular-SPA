@@ -1,0 +1,22 @@
+<div class="mt-5 container-fluid d-flex justify-content-center align-items-center">
+<div class="card mb-3 card-movie">
+    <div class="row g-0">
+      <div class="img-container">
+      <!-- <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a> -->
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
+      </div>
+      <div class="card-body-container">
+        <div class="card-body">
+          <h5 class="card-title">{{movieCard.original_title}}</h5>
+          <p class="card-text">Trama: {{movieCard.overview}} <br> Popolarità: {{movieCard.popularity}} <br> 
+            Data di rilascio: {{movieCard.release_date}} <br> Voto: {{movieCard.vote_average}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  <ng-template #noCard>
+    <p>Data not found</p>
+  </ng-template>

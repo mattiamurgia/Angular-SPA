@@ -8,8 +8,8 @@
 </div>
  -->
 
-<div class="card mb-3 card-movie" style="max-width: 640px;">
-  <div class="row g-0 {{idCard%2 == 0? 'left-img-card' : 'right-img-card'}}">
+<div class="card mb-3 card-movie">
+  <div class="row g-0">
     <div class="img-container">
     <!-- <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a> -->
     <p (click)="setMovie()"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></p>
@@ -20,7 +20,7 @@
         <p class="card-text">{{movieCard.overview}}</p>
       </div>
     </div>
-    <button class="btn custom-button">Dettagli <i class="bi bi-arrow-90deg-right"></i></button>
+    <button class="btn custom-button" (click)="setMovie()">Dettagli</button>
   </div>
 </div>
 

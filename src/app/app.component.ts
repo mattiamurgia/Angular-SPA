@@ -12,7 +12,7 @@ export class AppComponent {
 
   checkRoute = () => {
     const currentRoute = this.urlActive.url;
-    currentRoute !== "/login" ? true : false
+    return currentRoute !== "/login"
     }
   
   title = 'Angular-SPA';
