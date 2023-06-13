@@ -1,142 +1,131 @@
 @font-face {
-    font-family: KanitLight;
-    src: url(../../fonts/Kanit/Kanit-Light.woff);
+  font-family: KanitLight;
+  src: url(../../fonts/Kanit/Kanit-Light.woff);
 }
 
 @font-face {
-    font-family: KanitMedium;
-    src: url(../../fonts/Kanit/Kanit-Medium.woff);
+  font-family: KanitMedium;
+  src: url(../../fonts/Kanit/Kanit-Medium.woff);
 }
 
 @font-face {
-    font-family: KanitBold;
-    src: url(../../fonts/Kanit/Kanit-Bold.woff);
-}
-
-.home {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: KanitBold;
+  src: url(../../fonts/Kanit/Kanit-Bold.woff);
 }
 
 .spacer {
-    background-color:white;
-    text-align: center;
-    h2 {
-        font-family:KanitBold;
-    }
-    p {
-        font-family:KanitLight;
-    }
+  background-color: white;
+  text-align: center;
+  h2 {
+    font-family: KanitBold;
+  }
+  p {
+    font-family: KanitLight;
+  }
 }
-
 .hero-page {
-    background-image: url(../../images/logo3.jpg);
-    color:white;
+  background-image: url(../../images/logo3.jpg);
+  color: white;
 
-    h1 {
-        font-family: KanitBold;
-        letter-spacing: 3px;
-        font-size:70px;
-        margin-top:5px;
-        padding:5px;
-    }
-    
-    p {
-        width:100%;
-        font-family:KanitLight;
-        font-size:16px;
-    }
+  h1 {
+    font-family: KanitBold;
+    letter-spacing: 3px;
+    font-size: 30px;
+    margin-top: 5px;
+    padding: 5px;
+    color: white;
+  }
+
+  p {
+    width: 100%;
+    font-family: KanitLight;
+    font-size: 16px;
+  }
 }
 
 .hero-page-container {
-    background-color: rgba(36, 36, 36, 1);
-    width:110%;
+  background-color: rgba(36, 36, 36, 0.927);
+  width: 70%;
+  border-radius: 30px;
+  img {
+    border-radius: 50%;
+  }
 }
 
 .container-cards {
-    padding:0;
-    margin:0;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (min-device-width: 0px) and (max-device-width:576px) {
+@media screen and (min-device-width: 0px) and (max-device-width: 576px) {
+  .hero-page {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
 
-    .hero-page {
-        background-size:100% 100%;
-        background-repeat: no-repeat;
-        height:450px;
+  .hero-page-container {
+    width: 80%;
+    min-width: 200px;
+  }
 
-        h1 {
-            color:white;
-        }
+  .spacer {
+    height: 600px;
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
     }
-
-    .hero-page-container {
-        width:80%;
-        min-width:200px;
+    p {
+      width: 70%;
+      font-size: 1.5rem;
     }
-
-    .spacer {
-        height:600px;
-        h2 {
-            font-size:3.5rem;
-            margin-bottom:1rem;
-        }
-        p {
-            width:70%;
-            font-size:1.5rem;
-        }
-    }
+  }
 }
 
-@media screen and (min-device-width:577px) {
+@media screen and (min-device-width: 577px) {
+  .hero-page {
+    height: 750px;
+  }
 
-    .hero-page {
-        height:750px; 
+  .spacer {
+    height: 500px;
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
     }
+    p {
+      width: 70%;
+      font-size: 1rem;
+    }
+  }
 
-    .spacer {
-        height:500px;
-        h2 {
-            font-size:3rem;
-            margin-bottom:1.5rem;
-        }
-        p {
-            width:70%;
-            font-size:1rem;
-        }
-    }
-
-    .container-cards {
-        display:flex;
-        flex-direction: row;
-    }
+  .container-cards {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-@media screen and (min-device-width:768px) {
+@media screen and (min-device-width: 768px) {
+  .hero-page {
+    height: 500px;
 
-    .hero-page {
-        height:750px; 
-        
-        h1 {
-            font-size:8rem;
-        }
+    h1 {
+      font-size: 6rem;
     }
+  }
 
-    .spacer {
-        height:350px;
-        h2 {
-            font-size:2.5rem;
-            margin-bottom:1.5rem;
-        }
-        p {
-            width:50%;
-            font-size:1rem;
-        }
+  .spacer {
+    height: 350px;
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
-
+    p {
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
 }

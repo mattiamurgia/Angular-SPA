@@ -1,5 +1,7 @@
+<app-navbar></app-navbar>
 <div class="px-4 py-5 text-center hero-page d-flex justify-content-center align-items-center">
   <div class="hero-page-container d-flex flex-column justify-content-center align-items-center">
+    <img src="../../../assets/logo.png" alt="logo" width="85" height="85" class="mt-3">
   <h1 class="display-5 fw-bold">Color Movie</h1>
   </div>
 </div>
@@ -12,5 +14,5 @@
 <div class="container-cards bg-danger row">
   <app-card *ngFor="let item of movies; let i = index" class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 col-xl-3"[movieCard]="item" [idCard]="i"></app-card>
 </div>
-
+<app-footer></app-footer>
 

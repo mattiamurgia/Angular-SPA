@@ -4,7 +4,9 @@
   }
 
 nav{
-  z-index: 1000;
+  z-index: 1000 !important;
+  width: 100%;
+  position: fixed;
 }
 .navbar-style{
 
@@ -14,6 +16,10 @@ nav{
     background-color: rgba(0, 0, 0, 0.664) !important;
     a {
       color: white !important;
+    }
+    img{
+      border-radius: 50%!important;
+      background: red;
     }
 }
 
