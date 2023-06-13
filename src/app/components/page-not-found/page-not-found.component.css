@@ -1,1 +1,10 @@
-/*# sourceMappingURL=page-not-found.component.css.map */
+@font-face {
+  font-family: "KanitMedium";
+  src: url(../../fonts/Kanit/Kanit-Medium.woff);
+}
+.container-image {
+  font-family: "KanitMedium";
+}
+.container-image img {
+  max-width: 40%;
+}/*# sourceMappingURL=page-not-found.component.css.map */

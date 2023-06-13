@@ -3,13 +3,6 @@
   border: none;
 }
 
-.left-img-card, .right-img-card {
-  /*     display:flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center; */
-}
-
 .right-img-card {
   flex-direction: row-reverse;
 }
@@ -120,15 +113,15 @@ img:hover {
   .card-movie {
     position: relative;
     margin: 40px 0;
-    height: 635px;
+    height: 595px;
     font-size: 10px;
   }
   .card-img-top {
-    height: 425px;
+    height: 380px;
     width: 100%;
   }
   .img-container {
-    max-height: 425px;
+    max-height: 380px;
   }
   .card-body h5 {
     font-size: 1.8rem;

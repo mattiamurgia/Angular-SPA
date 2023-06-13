@@ -6,13 +6,33 @@
   </div>
 </div>
 
-<div class="spacer d-flex flex-column justify-content-center align-items-center">
+<div class="container-fluid">
+<div class="spacer mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
   <h2>Discover our new high performance platform</h2>
   <p>We collect movies from one of the best servers in the world. Seek your favourite movies, check their description, and keep finding something new you may like! </p>
 </div>
 
+<div class="home-section-container mt-5 mb-5 d-flex flex-column justify-content-center">
+  <div class="home-section-1 mt-5 mb-5 row">
+    <div class="home-section1-image col-12 col-md-6"></div>
+      <div class="mt-5 mb-5 home-section-body col-12 col-md-6">
+        <h2>Discover our new high performance platform</h2>
+        <p>We collect movies from one of the best servers in the world. Seek your favourite movies, check their description, and keep finding something new you may like! </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-section-2 mt-5 mb-5 row">
+    <div class="home-section2-image col-12 col-md-6"></div>
+      <div class="mt-5 mb-5 home-section-body col-12 col-md-6">
+        <h2>Discover our new high performance platform</h2>
+        <p>We collect movies from one of the best servers in the world. Seek your favourite movies, check their description, and keep finding something new you may like! </p>
+    </div>
+</div>
+
 <div class="container-cards bg-danger row">
   <app-card *ngFor="let item of movies; let i = index" class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 col-xl-3"[movieCard]="item" [idCard]="i"></app-card>
+</div>
 </div>
 <app-footer></app-footer>
 

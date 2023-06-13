@@ -1,5 +1,26 @@
-.bg-body-tertiary {
-  border-bottom: 2px solid white !important;
+@font-face {
+  font-family: "KanitMedium";
+  src: url(../../fonts/Kanit/Kanit-Medium.woff);
+}
+nav {
+  z-index: 1000 !important;
+  width: 100%;
+  position: fixed;
+}
+
+.navbar-style {
+  font-family: "KanitMedium";
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+          backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.664) !important;
+}
+.navbar-style a {
+  color: white !important;
+}
+.navbar-style img {
+  border-radius: 50% !important;
+  background: red;
 }
 
 .btn {
@@ -17,5 +38,5 @@
 }
 
 .user-container {
-  font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: white !important;
 }/*# sourceMappingURL=navbar.component.css.map */

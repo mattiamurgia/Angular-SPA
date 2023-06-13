@@ -13,9 +13,14 @@ form {
   border-radius: 12px;
   color: white;
 }
+form img {
+  max-width: 150px;
+  min-height: 120px;
+  border-radius: 50%;
+}
 form h3 {
   font-size: 3rem;
-  padding-top: 1rem;
+  padding-top: 0.6rem;
 }
 form label {
   font-size: 1.2rem;
@@ -38,14 +43,6 @@ form input::-moz-placeholder {
 }
 form input::placeholder {
   color: rgba(255, 255, 255, 0.497);
-}
-
-h3 {
-  font-family: KanitMedium;
-}
-
-.container-labels {
-  width: 100%;
 }
 
 .custom-button {
