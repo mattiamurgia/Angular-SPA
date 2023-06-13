@@ -26,5 +26,4 @@ export class LocalService {
     }
     return this.user.getValue();
   }
-
 }

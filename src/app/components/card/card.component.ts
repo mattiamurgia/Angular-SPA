@@ -23,5 +23,5 @@ export class CardComponent {
     this.router.navigate(['home/movies/', this.idCard])
   }
 
-/*   @Input() card!: Card; */
+
 }

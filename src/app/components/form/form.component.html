@@ -3,7 +3,7 @@
   <h3 class="text-center">Login</h3>
   <div class="container-labels d-flex flex-column justify-content-center align-items-center">
     <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" class="form-control" formControlName="nickname" placeholder="Your Nickname" [(ngModel)]="user.nickname" id="exampleInputEmail1" (change)="testRegex()">
+    <input type="email" class="form-control" formControlName="nickname" placeholder="Your Nickname" [(ngModel)]="user.nickname" id="exampleInputEmail1">
 
     <!-- Message Error Email -->
     <small *ngIf="!errorNickname; else elseNickname">
@@ -18,7 +18,7 @@
 
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" class="form-control" formControlName="password" placeholder="Your Password"
-      [(ngModel)]="user.password" id="exampleInputPassword1" (change)="testRegex()">
+      [(ngModel)]="user.password" id="exampleInputPassword1">
 
     <!-- Message Error Password -->
     <small *ngIf="!errorPassword; else elsePassword">
@@ -32,5 +32,5 @@
     </ng-template>
   </div>
 
-  <button type="submit" class="btn custom-button" [disabled]="errorNickname || errorPassword" (click)="onSubmit()">Submit</button>
+  <button type="submit" class="btn custom-button" [disabled]="errorNickname || errorPassword" (click)="onSubmit()" (click)="testRegex()">Submit</button>
 </form>

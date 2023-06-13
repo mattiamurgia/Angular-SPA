@@ -14,6 +14,7 @@ import { FormComponent } from './components/form/form.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 @NgModule({
 
   declarations: [
@@ -26,7 +27,8 @@ import { ListingComponentComponent } from './components/listing-component/listin
     FooterComponent,
     DetailComponent,
     FavoritesComponent,
-    ListingComponentComponent
+    ListingComponentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

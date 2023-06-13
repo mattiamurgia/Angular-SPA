@@ -11,7 +11,7 @@ export class NavbarComponent {
 
   service = inject(LocalService);
 
-  userName = JSON.stringify(this.service.getUser());
+  userName = JSON.stringify(this.service.getUser().nickname).replace(/"/g, '');
 
   showInput = false;
   searchQuery!: string;

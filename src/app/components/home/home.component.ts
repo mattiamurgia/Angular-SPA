@@ -34,34 +34,11 @@ export class HomeComponent implements OnInit {
         )
       );
   };
-  
+
   // funzione da associare a icon freccia indietro
   getback = () => {
     this.location.back();
   };
 
-  /*
-  dataCard: Card[] = [
-    {
-      img: 'https://picsum.photos/200/300',
-      title: 'One',
-      description: 'djwnwnjw',
-    },
-    {
-      img: 'https://picsum.photos/200/300',
-      title: 'Two',
-      description: 'lorembbekje',
-    },
-    {
-      img: 'https://picsum.photos/200/300',
-      title: 'Three',
-      description: 'ddjwjqqwkqw',
-    },
-    {
-      img: 'https://picsum.photos/200/300',
-      title: 'Four',
-      description: 'dwwkiwdwid',
-    },
-  ];
- */
+
 }
