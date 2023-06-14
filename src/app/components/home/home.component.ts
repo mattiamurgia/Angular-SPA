@@ -3,7 +3,6 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Observable, Subject, map } from 'rxjs';
 import { Card } from 'src/app/models/Card';
 import { MovieDiscover } from 'src/app/models/MovieDiscover';
-import { CardDetailService } from 'src/app/services/detailService/card-detail.service';
 import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-api.service';
 
 @Component({
@@ -13,7 +12,7 @@ import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-
 })
 export class HomeComponent implements OnInit {
   constructor(private http: MoviesCallApiService) {}
-  // serve a fare il back con la pagina precedente
+
   location = inject(Location);
 
   ngOnInit() {
