@@ -1,8 +1,8 @@
-<div class="mt-5 container-fluid d-flex justify-content-center align-items-center">
+<!-- <div class="mt-5 container-fluid d-flex justify-content-center align-items-center">
 <div class="card mb-3 card-movie">
     <div class="row g-0">
       <div class="img-container">
-      <!-- <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a> -->
+      <a (click)="setMovie()" [routerLink]="['movies', this.idCard]"><img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap"></a>
       <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}" alt="Card image cap">
       </div>
       <div class="card-body-container">
@@ -11,6 +11,24 @@
           <p class="card-text">Trama: {{movieCard.overview}} <br> Popolarità: {{movieCard.popularity}} <br> 
             Data di rilascio: {{movieCard.release_date}} <br> Voto: {{movieCard.vote_average}}</p>
         </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid"> 
+  <div class="movie-card" style="background-image: url(https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}); background-size: cover;">
+    <div class="col-lg-6 mx-auto movie-card-content">
+      <div class="img-col">
+        <img src="https://image.tmdb.org/t/p/w500{{movieCard.poster_path}}">
+      </div>
+      <div class="text-col d-flex">
+        <h1 class="display-5 fw-bold">{{movieCard.original_title}}</h1>
+        <p class="lead mb-4">{{movieCard.overview}}</p>
+        <p class="fs-6">Popolarità: {{movieCard.popularity}}</p>
+        <p class="fs-6">Data di rilascio: {{movieCard.release_date}} Voto: {{movieCard.vote_average}}</p>
+      </div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       </div>
     </div>
   </div>
