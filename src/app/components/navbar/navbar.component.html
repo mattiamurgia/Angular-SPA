@@ -17,6 +17,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="lists">Liste</a>
         </li>
+        <li *ngIf="checkHomeRouter()" class="nav-item">
+          <a class="nav-link" routerLink="home" fragment="section1" (click)="scrollToSection('section1')">Section 1</a>
+        </li>
+        <li *ngIf="checkHomeRouter()" class="nav-item">
+          <a class="nav-link" routerLink="home" fragment="section2" (click)="scrollToSection('section2')">Section 2</a>
+        </li>
       </ul>
       <div class="user-container">
         <p class="me-lg-5 mt-2">Ciao {{userName}}</p>

@@ -45,6 +45,10 @@ form input::placeholder {
   color: rgba(255, 255, 255, 0.497);
 }
 
+.container-labels {
+  width: 100%;
+}
+
 .custom-button {
   width: 30%;
   font-family: KanitLight;
@@ -61,8 +65,12 @@ form input::placeholder {
 
 @media screen and (max-device-width: 576px) {
   form {
+    height: 28rem;
     min-width: 16rem;
-    height: 20rem;
+  }
+  form img {
+    width: 120px;
+    height: 120px;
   }
   form input {
     max-width: 20rem;
@@ -76,7 +84,11 @@ form input::placeholder {
 }
 @media screen and (min-device-width: 577px) {
   form {
-    height: 25rem;
+    height: 30rem;
+  }
+  form img {
+    height: 140px;
+    width: 140px;
   }
   form input {
     max-width: 20rem;
@@ -84,7 +96,7 @@ form input::placeholder {
 }
 @media screen and (min-device-width: 1200px) {
   form {
-    height: 30rem;
+    height: 32rem;
   }
   input {
     max-width: 20rem;
