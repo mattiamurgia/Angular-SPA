@@ -19,8 +19,7 @@
     </ng-template>
 
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" formControlName="password" placeholder="Your Password"
-      [(ngModel)]="user.password" id="exampleInputPassword1">
+    <input type="password" class="form-control" formControlName="password" placeholder="Your Password">
 
     <!-- Message Error Password -->
     <small *ngIf="!errorPassword; else elsePassword">

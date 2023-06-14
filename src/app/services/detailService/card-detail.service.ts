@@ -13,7 +13,7 @@ export class CardDetailService {
   sendMovie = (movie : MovieDiscover) => {
     this.movieToPass.next(movie)
   }
-  
+
   getMovie = () => {
     return this.movieToPass.asObservable()
   }

@@ -1,7 +1,5 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
-import { Observable, Subject, map } from 'rxjs';
-import { Card } from 'src/app/models/Card';
 import { MovieDiscover } from 'src/app/models/MovieDiscover';
 import { MoviesCallApiService } from 'src/app/services/movieService/movies-call-api.service';
 

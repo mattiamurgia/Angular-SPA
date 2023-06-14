@@ -33,8 +33,7 @@ const routes: Routes = [
     pathMatch: 'full',
     canActivate: [authGuardGuard],
   },
-  // { path: '**', component: PageNotFoundComponent },
-  // { path: 'home', component: HomeComponent, pathMatch: 'full' },
+
   {
     path: 'home/movies/:id',
     component: DetailComponent,
@@ -44,12 +43,7 @@ const routes: Routes = [
   {
     path: '**',
     component: PageNotFoundComponent,
-    canActivate: [authGuardGuard]
-  }
-  // { path: 'lists', component: ListingComponentComponent, pathMatch: 'full' },
-  // { path: 'favorites', component: FavoritesComponent, pathMatch: 'full'},
-  // { path: '**', component: PageNotFoundComponent }
-  // // provo a fare il push
+  },
 ];
 
 @NgModule({
