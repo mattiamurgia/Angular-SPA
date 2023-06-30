@@ -7,6 +7,7 @@
   src: url(../../fonts/Kanit/Kanit-Light.woff);
 }
 form {
+  width: 100%;
   -webkit-backdrop-filter: blur(7px) saturate(200%);
           backdrop-filter: blur(7px) saturate(200%);
   background-color: rgba(0, 0, 0, 0.54);
@@ -14,11 +15,10 @@ form {
   color: white;
 }
 form img {
-  max-width: 150px;
-  min-height: 120px;
   border-radius: 50%;
 }
 form h3 {
+  font-family: KanitMedium;
   font-size: 3rem;
   padding-top: 0.6rem;
 }
@@ -29,7 +29,7 @@ form label {
 }
 form input {
   background-color: rgba(36, 36, 36, 0.852);
-  border: 2px solid #dc3545;
+  border: 2px solid transparent;
   color: white;
   border-radius: 25px 25px;
   width: 100%;
@@ -44,6 +44,13 @@ form input::-moz-placeholder {
 form input::placeholder {
   color: rgba(255, 255, 255, 0.497);
 }
+form .input-valid {
+  border-color: #35dc86;
+  background-color: transparent;
+}
+form .input-valid:hover {
+  box-shadow: 280px 0 0 0 inset #35dc86;
+}
 
 .container-labels {
   width: 100%;
@@ -51,6 +58,7 @@ form input::placeholder {
 
 .custom-button {
   width: 30%;
+  margin: 10px;
   font-family: KanitLight;
   background-color: rgba(36, 36, 36, 0.852);
   border: 2px solid #dc3545;
@@ -65,18 +73,22 @@ form input::placeholder {
 
 @media screen and (max-device-width: 576px) {
   form {
-    height: 28rem;
+    height: 32rem;
     min-width: 16rem;
   }
   form img {
-    width: 120px;
+    width: 80px;
     height: 120px;
+  }
+  form h3 {
+    font-size: 2rem;
   }
   form input {
     max-width: 20rem;
   }
   .custom-button {
     width: 30%;
+    margin-top: 10px;
   }
   .custom-button:hover {
     box-shadow: 130px 0 0 0 inset #dc3545;
@@ -84,19 +96,33 @@ form input::placeholder {
 }
 @media screen and (min-device-width: 577px) {
   form {
-    height: 30rem;
+    height: 34rem;
+  }
+  form h3 {
+    font-size: 2rem;
   }
   form img {
-    height: 140px;
-    width: 140px;
+    height: 120px;
+    width: 80px;
   }
   form input {
     max-width: 20rem;
+  }
+  .container-labels {
+    width: 90%;
+    min-height: 15rem;
   }
 }
 @media screen and (min-device-width: 1200px) {
   form {
     height: 32rem;
+  }
+  form img {
+    width: 100px;
+    height: 160px;
+  }
+  form h3 {
+    font-size: 3rem;
   }
   input {
     max-width: 20rem;

@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"favorites.component.css"}
+{"version":3,"sources":["favorites.component.scss","favorites.component.css"],"names":[],"mappings":"AAAA;EACE,0BAAA;EACA,6CAAA;ACCF;ADEA;EACE,0BAAA;EACA,4BAAA;ACAF;ADEE;EACE,cAAA;ACAJ","file":"favorites.component.css"}

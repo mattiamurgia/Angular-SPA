@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,9 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ListingComponentComponent } from './components/listing-component/listing-component.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderInterceptor } from './services/interceptors/interceptor-loader.service';
+import { LoaderService } from './services/loaderService/loader.service';
 @NgModule({
 
   declarations: [
@@ -30,7 +33,8 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     FavoritesComponent,
     ListingComponentComponent,
     PageNotFoundComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,7 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

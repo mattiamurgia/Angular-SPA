@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LoaderService } from 'src/app/services/loaderService/loader.service';
 
 @Component({
   selector: 'app-favorites',

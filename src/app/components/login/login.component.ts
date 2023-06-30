@@ -8,12 +8,12 @@ import { LocalService } from 'src/app/services/localService/local-service.servic
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  service = inject(LocalService);
-  data!:User;
+/*   service = inject(LocalService);
+     data!:User; */
 
   ngOnInit()
   {
-    this.data = this.service.getUser();
-    console.log('Sono login ⛔️', this.data);
+/*     this.data = this.service.getUser();
+    console.log('Sono login ⛔️', this.data); */
   }
 }

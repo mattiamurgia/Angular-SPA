@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
@@ -7,6 +7,7 @@ import { ListingComponentComponent } from './components/listing-component/listin
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { authGuardGuard } from './gateGuardian/auth-guard.guard';
 import { DetailComponent } from './components/detail/detail.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },

@@ -12,12 +12,9 @@ import { Md5 } from 'ts-md5';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  user: User = {
-    nickname: '',
-    password: '',
-    token: '',
-  };
-
+  
+  
+  user !: User 
 /*   formBuilder = inject(FormBuilder); */
   localService = inject(LocalService);
   private router = inject(Router);
@@ -38,6 +35,12 @@ export class FormComponent implements OnInit {
       password: ['', Validators.required],
     }); */
 
+    this.user = {
+      nickname: '',
+      password: '',
+      token: '',
+    };
+
     this.loginForm = new FormGroup({
       nickname : new FormControl('', Validators.required),
       password : new FormControl('', Validators.required)
@@ -56,14 +59,14 @@ export class FormComponent implements OnInit {
   }
 
   updateNickname = ( value : string | null) => {
-    const updatedValue = value ?? 'c'
+    const updatedValue = value ?? ''
     this.loginForm.controls["nickname"].setValue(updatedValue, {emitEvent: false})
     // qui i controlli vengono effettuati al cambio del campo "nickname"
     this.testRegex("nickname")
   }
 
   updatePassword = ( value : string | null) => {
-    const updatedValue = value ?? 'c'
+    const updatedValue = value ?? ''
     this.loginForm.controls["password"].setValue(updatedValue, {emitEvent: false})
     // qui i controlli vengono effettuati al cambio del campo "password"
     this.testRegex("password")
@@ -119,6 +122,11 @@ export class FormComponent implements OnInit {
                               this.onSubmit() ) : false
   }
 
+  switchInputForm = (event : KeyboardEvent) => {
+    const fieldPassword = document.getElementById("fieldPassword")
+    event.key === "Enter" ? fieldPassword!.focus()  : false
+  }
+
   onSubmit() {
 
     // i controlli avvengono in automatico quando richiamato il Submit
@@ -137,7 +145,7 @@ export class FormComponent implements OnInit {
     this.localService.setUser(userGiven)
 
     /* this.localService.setUser(this.user); */
-
+      
       this.checkUser(
         this.localService.getUser().nickname,
         this.localService.getUser().password

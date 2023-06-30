@@ -1,5 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { LoaderService } from './services/loaderService/loader.service';
+import { Observable, ObservedValueOf } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
 
   urlActive = inject(Router)
+  loader = inject(LoaderService)
 
   checkRoute = () => {
     const currentRoute = this.urlActive.url;

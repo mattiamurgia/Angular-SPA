@@ -9,15 +9,18 @@
 }
 
 form {
+  width:100%;
   backdrop-filter: blur(7px) saturate(200%);
     background-color: rgba(0, 0, 0, 0.54);
     border-radius: 12px;
     color: white;
-    img{max-width: 150px;
-    min-height: 120px;
-  border-radius: 50%;}
+
+    img{
+      border-radius: 50%;
+    }
 
     h3{
+      font-family: KanitMedium;
       font-size: 3rem;
       padding-top: 0.6rem;
     }
@@ -30,19 +33,27 @@ form {
 
     input {
       background-color: rgba(36, 36, 36, 0.852);
-      border: 2px solid #dc3545;
+      border: 2px solid transparent;
       color:white;
       border-radius:25px 25px;
       width:100%;
       transition: all 0.5s ease-out;
       &:hover {
         box-shadow: 280px 0 0 0 inset #dc3545;
+        }
       }
-    }
       input::placeholder {
       color:rgba(255, 255, 255, 0.497);
     }
-}
+
+    .input-valid {
+      border-color: #35dc86;
+      background-color: transparent;
+      &:hover {
+        box-shadow: 280px 0 0 0 inset #35dc86;
+        }
+    }
+  }
 
 .container-labels {
   width:100%;
@@ -50,6 +61,7 @@ form {
 
 .custom-button {
   width:30%;
+  margin:10px;
   font-family: KanitLight;
   background-color: rgba(36, 36, 36, 0.852);
   border: 2px solid #dc3545;
@@ -64,12 +76,16 @@ form {
 
 @media screen and (max-device-width: 576px)  {
   form {
-    height:28rem;
+    height:32rem;
     min-width:16rem;
 
     img {
-      width: 120px;
+      width: 80px;
       height: 120px;
+    }
+
+    h3 {
+      font-size:2rem;
     }
 
     input {
@@ -79,6 +95,7 @@ form {
 
   .custom-button {
     width:30%;
+    margin-top: 10px;
     &:hover {
       box-shadow: 130px 0 0 0 inset #dc3545;
     }
@@ -88,23 +105,41 @@ form {
 @media screen and (min-device-width: 577px) {
 
     form {
-      height:30rem;
+      height:34rem;
+
+      h3 {
+        font-size: 2rem;
+      }
 
       img {
-        height:140px;
-        width: 140px;
+        height:120px;
+        width: 80px;
       }
 
       input {
       max-width: 20rem;
     }
   }
+
+  .container-labels {
+    width:90%;
+    min-height:15rem;
+  }
 }
 
 @media screen and (min-device-width:1200px) {
 
   form {
-    height:32rem
+    height:32rem;
+
+    img {
+      width:100px;
+      height:160px;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
   }
 
   input {
